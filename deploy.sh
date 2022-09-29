@@ -1,16 +1,16 @@
 #!/usr/bin/env sh
 
-# set -e
+set -e
 
-# npm run build
+npm run build
 
-# cd dist
+cd dist
 
-# git init
-# git checkout -b main
-# git add -A
-# git commit -m 'deploy'
+git init
+git checkout -b main
+git add -A
+git commit -m 'deploy'
 
-# git push -f git@github.com:huchase/huchase.github.io.git main
+git push -f git@github.com:huchase/huchase.github.io.git main
 
-# cd -
+cd -
