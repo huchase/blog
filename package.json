@@ -1,4 +1,5 @@
 {
+  "name": "@huchase/blog",
   "private": true,
   "packageManager": "pnpm@7.1.7",
   "scripts": {
