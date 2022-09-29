@@ -27,4 +27,4 @@ jobs:
           folder: dist
           token: ${{ secrets.DEPLOY_TOKEN }}
           branch: gh-pages
-          repository-name: huchase/huchase.github.io
+          # repository-name: huchase/huchase.github.io
