@@ -20,7 +20,7 @@ import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './scripts/slugify'
 
 export default defineConfig({
-  base: 'https://huchase.github.io/blog/',
+  base: '/blog/',
   resolve: {
     alias: [
       { find: '~/', replacement: `${resolve(__dirname, 'src')}/` },
