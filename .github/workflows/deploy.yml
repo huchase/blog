@@ -1,0 +1,36 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  page-generator:
+    name: Generating pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npx pnpm i
+      - name: Build pages
+        run: npx pnpm build
+      - name: Deploy to website
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GIT_CONFIG_NAME: huchase
+          GIT_CONFIG_EMAIL: ch3203078092@gmail.com
+          REPOSITORY_NAME: huchase/huchase.github.io
+          ACCESS_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          BASE_BRANCH: main
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: dist # The folder the action should deploy.
+          TARGET_FOLDER: /
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+          COMMIT_MESSAGE: auto-deploy
