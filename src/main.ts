@@ -9,7 +9,7 @@ import NProgress from 'nprogress'
 // import { ViteSSG } from 'vite-ssg'
 // import dayjs from 'dayjs'
 // import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { createApp } from 'vue'
 import { createHead } from '@vueuse/head'
 // @ts-expect-error anyway
@@ -25,7 +25,7 @@ const routes = autoRoutes.map((i) => {
 })
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 })
 
