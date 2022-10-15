@@ -1,7 +1,5 @@
 ---
 title: Chase Hu
-plum: true
 ---
-[[toc]]
 
-你好, 我是 Chase Hu, 一位前端开发者.
+Hey, I am Chase Hu, a front-end coder.
