@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  page-generator:
+    name: Generating pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npx pnpm install --no-frozen-lockfile
+      - name: Build pages
+        run: npx pnpm build
+      - name: Deploy to website
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          folder: dist
+          token: ${{ secrets.GA_TOKEN }}
+          branch: gh-pages
+          # repository-name: huchase/huchase.github.io
