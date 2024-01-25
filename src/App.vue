@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 useHead({
-  // TODO: How to use @vueuse/head & unocss ?
+  // TODO: How to use @vueuse/head & UnoCSS ?
   meta: [
     { property: 'key', content: 'value' },
   ],

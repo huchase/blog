@@ -7,7 +7,9 @@
     "dev": "vite --port 3203 --open",
     "preview": "vite preview",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "up": "bash upload.bash",
+    "new": "bash new.bash"
   },
   "dependencies": {
     "@vueuse/core": "^8.9.4",
